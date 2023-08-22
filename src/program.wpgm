@@ -1,0 +1,22 @@
+import wollok.game.*
+import auto.*
+program juego {
+	game.height(12)
+	game.width(12)
+	game.title("PRueba 123")
+	corsa.position(game.at(0.randomUpTo(game.width()), 0.randomUpTo(game.height())))
+	game.addVisual(corsa)
+	keyboard.up().onPressDo({
+		corsa.arriba()
+	})
+		keyboard.down().onPressDo({
+		corsa.abajo()
+	})
+			keyboard.left().onPressDo({
+		corsa.left()
+	})
+				keyboard.right().onPressDo({
+		corsa.right()
+	})
+	game.start()
+}
